@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ROMNICKH!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #ff6600;
+            padding: 15px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+        .navbar a:hover {
+            background-color: #cc5500;
+            border-radius: 5px;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            color: #ff6600;
+            font-size: 50px;
+        }
+        img {
+            width: 50%;
+            max-width: 250px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            /* Added animation class */
+            animation: wiggle 2s ease-in-out infinite;
+        }
+        .hidden {
+            display: none;
+        }
+        .play-button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .play-button:hover {
+            background-color: #cc5500;
+        }
+
+        body {
+          background: linear-gradient(to right, #ff6600, #ffcc00, #ffff00, #ccff00, #99ff00);
+          animation: backgroundGradient 10s linear infinite;
+        }
+
+        @keyframes backgroundGradient {
+          0% { background: linear-gradient(to right, #ff6600, #ffcc00, #ffff00, #ccff00, #99ff00); }
+          25% { background: linear-gradient(to right, #ffcc00, #ffff00, #ccff00, #99ff00, #66ff00); }
+          50% { background: linear-gradient(to right, #ffff00, #ccff00, #99ff00, #66ff00, #33ff00); }
+          75% { background: linear-gradient(to right, #ccff00, #99ff00, #66ff00, #33ff00, #00ff00); }
+          100% { background: linear-gradient(to right, #99ff00, #66ff00, #33ff00, #00ff00, #00cc00); }
+        }
+
+        .spark {
+          background-color: #ffcc00;
+          animation: sparkAnimation 2s linear infinite, sparkColor 2s linear infinite;
+        }
+
+        @keyframes sparkColor {
+          0% { background-color: #ffcc00; }
+          25% { background-color: #00eeff; }
+          50% { background-color: #ff0044; }
+          75% { background-color: #ff00cc; }
+          100% { background-color: #66ff00; }
+        }
+
+        .spark-container {
+          position: relative;
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          margin-top: 10px;
+          overflow: hidden;
+        }
+
+        .spark {
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          background-color: #ffcc00;
+          border-radius: 50%;
+          opacity: 0;
+          animation: sparkAnimation 2s linear infinite;
+        }
+
+        .spark:nth-child(1) { left: 10px; top: 20px; animation-delay: 0.1s; }
+        .spark:nth-child(2) { left: 50px; top: 60px; animation-delay: 0.3s; }
+        .spark:nth-child(3) { left: 80px; top: 10px; animation-delay: 0.5s; }
+        .spark:nth-child(4) { left: 20px; top: 80px; animation-delay: 0.7s; }
+
+        @keyframes sparkAnimation {
+          0% { transform: translate(0, 0); opacity: 1; }
+          50% { opacity: 0.5; }
+          100% { transform: translate(50px, -50px); opacity: 0; }
+        }
+
+        @keyframes wiggle {
+          0% { transform: translate(0, 0); }
+          25% { transform: translate(5px, -3px); }
+          50% { transform: translate(0, 0); }
+          75% { transform: translate(-5px, 3px); }
+          100% { transform: translate(0, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#" onclick="showTab('home')">Home</a>
+    </div>
+
+    <div id="home" class="container">
+        <br>
+        <button class="play-button" onclick="playAudio()">▶ Play Birthday Song</button>
+        <div class="spark-container">
+          <div class="spark"></div>
+          <div class="spark"></div>
+          <div class="spark"></div>
+          <div class="spark"></div>
+        </div>
+        <audio id="birthdayAudio">
+          <source src="./ROM.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <h1>🎉 Happy Birthday ROMNICKH! 🎂</h1>
+        <p>THANK YOU SA LAHAT💖</p>
+        <p>PADAYUN SA LAHAT!!! 🥳🎈</p>
+        <img src="ROM.jpg" alt="Birthday Celebration">
+        <img src="SALP (1).jpg" alt="Birthday Cake">
+        <img src="SALP (2).jpg" alt="Birthday Party">
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.getElementById("home").classList.add("hidden");
+            document.getElementById(tabId).classList.remove("hidden");
+        }
+
+        function playAudio() {
+            const audio = document.getElementById("birthdayAudio");
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
